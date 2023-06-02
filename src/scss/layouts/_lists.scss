@@ -26,6 +26,7 @@
 
             &:hover .dot {
                 opacity: 1;
+                scale: 1;
             }
 
             .dot {
@@ -36,6 +37,7 @@
                 border-radius: 50%;
                 margin-top: .3rem;
                 opacity: 0;
+                scale: .5;
                 transition: .3s ease-out;
             }
         }
@@ -55,6 +57,7 @@
     transform: translate(calc(100% + 25vw), 0) rotate(0.001deg);
     transition: transform .8s cubic-bezier(.7, 0, .2, 1);
     will-change: transform;
+    overflow: hidden;
 
     @include mq(mq2) {
         width: 70%;
@@ -83,6 +86,7 @@
         transition: all .6s cubic-bezier(.7, 0, .2, 1);
         will-change: transform;
         transition-delay: 0s;
+        z-index: 10;
 
         .nav-title {
             padding-bottom: 1rem;
@@ -129,9 +133,15 @@
                 &:hover {
                     .list-link {
                         font-size: calc(size('big-size') + .5rem);
+
+                        @include mq(mq5) {
+                            font-size: size('gaint-size') + .6rem;
+                            font-weight: 400;
+                        }
+
                         filter: blur(0px);
                         color: $clr-white;
-                        animation: revealtext .5s forwards ease-in;
+                        animation: revealtext .2s forwards ease-in;
 
                         &:before {
                             left: 0;
@@ -146,7 +156,7 @@
                     font-size: size('big-size') +.7rem;
                     font-weight: weight('w-500');
                     color: $clr-white;
-                    transition: filter .4s ease, font-size .4s ease;
+                    transition: filter .2s ease, font-size .4s ease;
 
                     @include mq(mq4) {
                         font-size: size('big-size') + .3rem;

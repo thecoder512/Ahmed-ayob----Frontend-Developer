@@ -214,7 +214,7 @@
 
                         @include mq(mq5) {
                             transform: translate(2px,
-                                    18px) rotate(-45deg);
+                                    28px) rotate(-45deg);
                         }
                     }
 
@@ -225,7 +225,7 @@
 
                     @include mq(mq5) {
                         transform: translate(2px,
-                                18px) rotate(45deg);
+                                28px) rotate(45deg);
                     }
                 }
             }

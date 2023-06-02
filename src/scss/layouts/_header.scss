@@ -39,7 +39,7 @@ header {
                 display: inline-block;
                 font-size: size('titles-size');
                 background-color: #676b74;
-                // z-index: 10;
+                z-index: 10;
 
                 @include mq(mq2) {
                     font-size: size('big-size') + .2rem;

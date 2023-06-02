@@ -6,46 +6,62 @@
     .hero-container {
         position: relative;
         overflow: hidden;
+        // background-image: url('../../../public/home.png');
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // height: 100vh;
 
         .hero-img {
-            height: 100vh;
-            position: relative;
-
-            @include mq(mq6) {
-                height: 90vh;
-                zoom: .85;
-            }
-
-            svg {
-                width: 100%;
-                height: fit-content;
-            }
+            display: block;
+            height: 110vh;
 
             img {
-                display: flex;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 290px;
-                margin-bottom: 0;
-
-                @include mq(mq1fold) {
-                    margin-bottom: 2rem;
-                }
-
-                @include mq(mq1) {
-                    width: 380px;
-                    margin-bottom: 0;
-                }
-
-
-                @include mq(mq2) {
-                    width: 430px;
-                }
+                height: 110vh;
+                object-fit: cover;
             }
+
         }
+
+        // .hero-img {
+        //     // height: 100vh;
+        //     position: relative;
+
+        //     @include mq(mq6) {
+        //         // height: 90vh;
+        //         // zoom: .85;
+        //     }
+
+        //     // svg {
+        //     //     width: 100%;
+        //     //     height: fit-content;
+        //     // }
+
+        //     img {
+        //         display: flex;
+        //         // position: absolute;
+        //         bottom: 0;
+        //         left: 0;
+        //         right: 0;
+        //         margin: 0 auto;
+        //         width: 118%;
+        //         // margin-bottom: 0;
+
+        //         // @include mq(mq1fold) {
+        //         //     margin-bottom: 2rem;
+        //         // }
+
+        //         // @include mq(mq1) {
+        //         //     width: 380px;
+        //         //     margin-bottom: 0;
+        //         // }
+
+
+        //         // @include mq(mq2) {
+        //         //     width: 430px; 
+        //         // }
+        //     }
+        // }
 
         .hero-text {
             display: grid;
@@ -53,7 +69,7 @@
             grid-template-columns: 5fr 1fr;
             position: absolute;
             max-width: 968px;
-            bottom: 3rem;
+            bottom: 15%;
             left: 0;
             right: 0;
             margin: 0 1rem;

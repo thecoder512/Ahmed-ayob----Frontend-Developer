@@ -23,7 +23,7 @@ export default class HeroAnimation {
             rotation: 0.01,
         });
         tl.to(
-            '.hero-section .hero-container',
+            '.hero-img',
             2,
             {
                 height: '90vh',
