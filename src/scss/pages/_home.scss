@@ -1,0 +1,147 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.hero-section {
+
+    .hero-container {
+        position: relative;
+        overflow: hidden;
+
+        .hero-img {
+            height: 100vh;
+            position: relative;
+
+            @include mq(mq6) {
+                height: 90vh;
+                zoom: .85;
+            }
+
+            svg {
+                width: 100%;
+                height: fit-content;
+            }
+
+            img {
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 290px;
+                margin-bottom: 0;
+
+                @include mq(mq1fold) {
+                    margin-bottom: 2rem;
+                }
+
+                @include mq(mq1) {
+                    width: 380px;
+                    margin-bottom: 0;
+                }
+
+
+                @include mq(mq2) {
+                    width: 430px;
+                }
+            }
+        }
+
+        .hero-text {
+            display: grid;
+            align-items: end;
+            grid-template-columns: 5fr 1fr;
+            position: absolute;
+            max-width: 968px;
+            bottom: 3rem;
+            left: 0;
+            right: 0;
+            margin: 0 1rem;
+            color: $clr-white;
+
+            @include mq(mq1) {
+                grid-template-columns: 4fr 1fr;
+                margin: 0 1.5rem;
+            }
+
+            @include mq(mq2) {
+                grid-template-columns: 5fr 2fr;
+                margin: 0 2.5rem;
+            }
+
+            @include mq(mq3) {
+                grid-template-columns: 4fr 1fr;
+                margin: 0 3rem;
+            }
+
+            @include mq(mq4) {
+                grid-template-columns: 7fr 2fr;
+                margin: 0 4.5rem;
+            }
+
+            @include mq(mq5) {
+                margin: 0 auto;
+            }
+
+            @include mq(mq6) {
+                margin-bottom: 2rem;
+            }
+
+
+            h1 {
+                font-weight: 500;
+                margin-top: 1.5rem;
+
+                @include mq(mq1) {
+                    font-size: size('gaint-size') - .6rem;
+                }
+
+                @include mq(mq1fold) {
+                    font-size: size('gaint-size') - .9rem;
+                }
+
+                @include mq(mq2) {
+                    margin-top: 3rem;
+                    font-size: size('gaint-size') + .4rem;
+                }
+
+                @include mq(mq3) {
+                    margin-top: 4rem;
+                    font-size: size('gaint-size') + .8rem;
+                }
+
+                @include mq(mq4) {
+                    margin-top: 4rem;
+                    font-size: size('gaint-size') + 1.8rem;
+                }
+
+                span {
+                    font-weight: weight('w-600');
+                }
+            }
+
+            .arrow {
+                @include mq(mq2) {
+                    width: 40px;
+                    scale: 1.3;
+                }
+
+                @include mq(mq4) {
+                    width: 50px;
+                    scale: 1.7;
+                }
+
+                @include mq(mq5) {
+                    width: 50px;
+                    scale: 2;
+                }
+            }
+
+            .arrow path {
+                @include mq(mq1) {
+                    stroke-width: 2.5;
+                }
+            }
+        }
+    }
+}

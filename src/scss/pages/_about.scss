@@ -1,0 +1,99 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.about-section {
+
+    .about-conainer {
+        position: relative;
+        @include section;
+        @include container;
+        display: grid;
+
+        .about-title {
+            gap: .5rem;
+            font-size: size('titles-size');
+            font-weight: weight('w-600');
+            margin-bottom: .8rem;
+
+            .word {
+                overflow: hidden;
+            }
+
+            @include mq(mq1) {
+                font-size: size('big-size') - .1rem;
+                margin-bottom: 1rem;
+            }
+
+            @include mq(mq2) {
+                font-size: size('gaint-size') - .5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            @include mq(mq3) {
+                font-size: size('gaint-size');
+                margin-bottom: 2rem;
+            }
+
+            @include mq(mq4) {
+                font-size: size('gaint-size') + .5rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        p {
+            font-size: size('small-size');
+            width: 80%;
+
+            .word {
+                overflow: hidden;
+            }
+
+            @include mq(mq1) {
+                font-size: size('paragrph-size');
+            }
+
+            @include mq(mq2) {
+                font-size: size('medium-size');
+                width: 90%;
+            }
+
+            @include mq(mq3) {
+                font-size: size('titles-size');
+                width: 80%;
+            }
+
+            @include mq(mq3) {
+                font-size: size('big-size');
+                width: 70%;
+            }
+        }
+
+        .arrow {
+            position: absolute;
+            width: 80%;
+            right: 7rem;
+            top: -2rem;
+            transform-origin: center;
+
+            @include mq(mq4) {
+                right: 9rem;
+                width: 130%;
+            }
+
+            & path {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: strokeAnimation 2s linear forwards;
+            }
+        }
+
+        .about-btn-arow-group {
+            position: relative;
+            place-self: end;
+
+            @include mq(mq4) {
+                margin-right: 6%;
+            }
+        }
+    }
+}

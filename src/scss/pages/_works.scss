@@ -1,0 +1,49 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.works-section {
+    .works-container {
+        position: relative;
+        @include section;
+        @include container;
+        display: grid;
+
+        @include mq(mq2) {
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+        }
+
+        @include mq(mq5) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            text-align: center;
+
+            @include mq(mq3) {
+                font-size: size('big-size') + .2rem;
+            }
+
+            @include mq(mq4) {
+                font-size: size('gaint-size');
+            }
+
+        }
+
+        .works-btn {
+            position: relative;
+            justify-self: center;
+            width: fit-content;
+            height: fit-content;
+            font-size: size('titels-size');
+            padding: 1rem 2.5rem;
+            margin-top: 6rem;
+            border-radius: 50px;
+            border: 1px solid $clr-black;
+            background-color: $clr-white;
+            color: $clr-black;
+        }
+
+    }
+}

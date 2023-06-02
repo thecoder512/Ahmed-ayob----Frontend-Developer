@@ -1,0 +1,100 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    .header-container {
+        @include flex-center-between;
+        @include container;
+        height: 4rem;
+        margin-inline: 1.5rem;
+
+        @include mq(mq3) {
+            padding-top: 3rem;
+        }
+
+        .logo {
+            @include flex-center;
+            gap: .25rem;
+            width: 148px;
+            white-space: nowrap;
+            color: $clr-white;
+            overflow: hidden;
+
+            @include mq(mq2) {
+                font-size: size('big-size');
+            }
+
+            @include mq(mq3) {
+                width: 170px;
+                font-size: size('titles-size');
+            }
+
+            .logo-mark {
+                display: inline-block;
+                font-size: size('titles-size');
+                background-color: #676b74;
+                // z-index: 10;
+
+                @include mq(mq2) {
+                    font-size: size('big-size') + .2rem;
+                }
+
+                @include mq(mq3) {
+                    font-size: size('big-size');
+                }
+            }
+
+            .logo-text {
+                // overflow: hidden;
+            }
+        }
+
+        .menu {
+            position: relative;
+            color: $clr-white;
+
+            @include mq(mq2) {
+                font-size: size('big-size');
+            }
+
+            @include mq(mq3) {
+                font-size: size('big-size') + .3rem;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $clr-white;
+                left: -10px;
+                bottom: 35%;
+
+
+                @include mq(mq3) {
+                    width: 8px;
+                    height: 8px;
+                    left: -13px;
+                }
+
+            }
+
+            @include mq(mq4) {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.gat {
+    display: grid;
+    place-content: center;
+}

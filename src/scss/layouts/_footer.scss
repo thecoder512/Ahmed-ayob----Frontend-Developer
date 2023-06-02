@@ -1,0 +1,316 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.footer-seciton {
+    position: relative;
+    margin-top: 4rem;
+    background-color: $clr-black;
+    padding-bottom: 3rem;
+
+    .footer-naviation {
+        @include section;
+        @include container;
+        padding-block: 3rem;
+        display: grid;
+        z-index: 10;
+        position: relative;
+
+        @include mq(mq1) {
+            gap: 1.5rem;
+        }
+
+        @include mq(mq4) {
+            margin-inline: 7.5rem;
+            gap: 1rem;
+        }
+
+        @include mq(mq5) {
+            margin-inline: auto;
+            gap: 1rem;
+        }
+
+        .first-col {
+            position: relative;
+            margin-bottom: 3.5rem;
+
+            .col-text {
+                position: relative;
+                color: $clr-white;
+
+
+                .wrapper {
+                    @include flex-center;
+                    margin-bottom: -.8rem;
+
+                    img {
+                        width: 40px;
+                        border-radius: 50%;
+                        margin-right: .3rem;
+
+                        @include mq(mq1) {
+                            width: 60px;
+                        }
+
+                        @include mq(mq2) {
+                            width: 80px;
+                        }
+
+                        @include mq(mq4) {
+                            width: 100px;
+                        }
+                    }
+                }
+
+                h2 {
+                    font-size: size('gaint-size');
+                    font-weight: weight('w-500');
+                    // height: 113px;
+                    overflow: hidden;
+                    position: relative;
+
+                    @include mq(mq1) {
+                        font-size: size('gaint-size') + .5rem;
+                    }
+
+                    @include mq(mq2) {
+                        font-size: size('gaint-size') + 1.5rem;
+                    }
+
+                    @include mq(mq3) {
+                        font-size: size('gaint-size') + 2.5rem;
+                    }
+
+                    @include mq(mq4) {
+                        font-size: size('gaint-size') + 3.5rem;
+                    }
+
+                    &:nth-child(2) {
+                        @include mq(mq4) {
+                            margin-top: -1.5rem;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+
+            }
+        }
+
+        .second-col {
+            position: relative;
+            display: grid;
+
+            .footer-btn {
+                place-self: end;
+                background-color: $clr-orange-dark;
+                margin-right: 2rem;
+
+                @include mq(mq2) {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                @include mq(mq3) {
+                    width: 140px;
+                    height: 140px;
+                }
+
+                @include mq(mq4) {
+                    width: 180px;
+                    height: 180px;
+                }
+
+                .btn-text {
+                    font-size: size('medium-size') - .1rem;
+                    font-weight: weight('w-500');
+
+                    @include mq(mq2) {
+                        font-size: size('medium-size') + .1rem;
+                    }
+
+                    @include mq(mq4) {
+                        font-size: size('big-size') - .1rem;
+                    }
+                }
+
+
+            }
+
+            svg {
+                position: absolute;
+            }
+
+            .line {
+                position: absolute;
+                top: 3.7rem;
+                width: 100%;
+                height: 2.5px;
+                background-color: $clr-border-light;
+
+                @include mq(mq2) {
+                    top: 3.8rem;
+                    height: 3px;
+                }
+
+                @include mq(mq4) {
+                    top: 5.6rem;
+                    height: 3px;
+                }
+            }
+
+            .footer-arrow {
+                right: 0;
+                top: -3rem;
+
+                @include mq(mq1) {
+                    scale: 1.1;
+                    right: 1rem;
+                }
+
+                @include mq(mq2) {
+                    scale: 1.2;
+                    top: -5rem;
+                    right: 1.5rem;
+                }
+
+                @include mq(mq4) {
+                    scale: 1.5;
+                    top: -5rem;
+                    right: 1.5rem;
+                }
+            }
+        }
+
+        .third-col {
+            @include grid-place-center;
+            margin-block: 2rem;
+
+            @include mq(mq2) {
+                @include flex-center;
+                justify-content: start;
+                gap: 2.2rem;
+            }
+
+            @include mq(mq4) {
+                gap: 4.2rem;
+            }
+
+            .contact-btn {
+                font-size: size('small-size');
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+                padding: .5rem 2.5rem;
+                margin-bottom: 1rem;
+                border-radius: 50px;
+                border: 1px solid $clr-border-light;
+
+                @include mq(mq1) {
+                    font-size: size('medium-size');
+                    padding: .9rem 3rem;
+                }
+
+                @include mq(mq4) {
+                    font-size: size('big-size');
+                    padding: 1.1rem 4rem;
+                }
+            }
+        }
+
+        .forth-col {
+            display: grid;
+            grid-template-columns: 2fr;
+            gap: 1rem;
+
+            @include mq(mq2) {
+                @include flex-center-between;
+                gap: 2.2rem;
+            }
+
+            @include mq(mq4) {
+                @include flex-center-between;
+                gap: 4.5rem;
+            }
+
+            .flex-footer {
+                @include flex-center-between;
+                margin-top: .5rem;
+
+                @include mq(mq2) {
+                    gap: 2.2rem;
+                }
+
+                @include mq(mq4) {
+                    gap: 4.5rem;
+                }
+            }
+
+            .first-row {
+                .social-link {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 0;
+                        height: 2px;
+                        inset: auto 0 0 0;
+                        margin: 0 auto;
+                        transform-origin: right;
+                        background-color: $clr-white;
+                        transition: .3s ease-in-out;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+
+                div {
+                    @include flex-center;
+                    gap: 2rem;
+
+                    svg {
+                        width: size('gaint-size') - .5rem;
+                        height: size('gaint-size') - .5rem;
+                        fill: $clr-white;
+
+                        @include mq(mq4) {
+                            width: size('gaint-size') + .5rem;
+                            height: size('gaint-size') + .5rem;
+                        }
+
+
+                    }
+                }
+
+
+
+                h3 {
+                    font-size: size('small-size');
+                    font-weight: weight('w-400');
+                    color: $clr-gray;
+                    margin-bottom: .5rem;
+
+                    @include mq(mq4) {
+                        font-size: size('titles-size');
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                p {
+                    color: $clr-white;
+                    font-size: size('paragrph-size');
+                    font-weight: weight('w-500');
+
+                    @include mq(mq4) {
+                        font-size: size('big-size');
+                    }
+                }
+            }
+
+        }
+    }
+}

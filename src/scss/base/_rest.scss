@@ -1,0 +1,48 @@
+@use '../utils' as *;
+@use './typography' as *;
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    overflow: auto;
+}
+
+body {
+    display: grid;
+    // justify-content: center;
+    font-family: $popins;
+    font-size: 1rem;
+    background-color: $clr-white;
+    color: $clr-black;
+    overflow-x: hidden;
+
+    @include mq(mq6) {
+        zoom: 1.5;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    user-select: none;
+}
+
+section {
+    background-color: $clr-white;
+}

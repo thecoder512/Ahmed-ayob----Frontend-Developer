@@ -1,0 +1,34 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.btn-text {
+    font-family: $popins;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: size('small-size ');
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0) rotate(0.001deg);
+}
+
+.btn-radius {
+    font-family: $popins;
+    outline: none;
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: $clr-black;
+    color: $clr-white;
+    will-change: transform;
+    transform: translateZ(0) rotate(0.001deg);
+    cursor: pointer;
+    overflow: hidden;
+
+    @include mq(mq4) {
+        width: 180px;
+        height: 180px;
+        font-size: size('titles-size');
+    }
+}

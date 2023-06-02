@@ -1,0 +1,29 @@
+@use "../utils/mixins" as *;
+
+
+$popins: 'Poppins', sans-serif;
+
+/*========== Font and typography ==========*/
+$sizes: (
+    'gaint-size':2.1875rem,
+    'big-size': 1.325rem,
+    'titles-size': 1.125rem,
+    'medium-size':.9375rem,
+    'paragrph-size': .8125rem,
+    'small-size': .75rem,
+);
+
+// @include mq(mq1) {}
+
+// @include mq(mq2) {}
+
+// @include mq(mq3) {}
+
+/*========== Font weight ==========*/
+$weights: (
+    'w-300':300,
+    'w-400':400,
+    'w-500':500,
+    'w-600':600,
+    'w-700':700,
+);
