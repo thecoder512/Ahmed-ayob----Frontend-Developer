@@ -1,4 +1,3 @@
-// import { drawSVG } from '/node_modules/gsap-drawsvg/drawsvgmin.js';
 import { gsap } from '/node_modules/gsap/all.js';
 
 export default class MenuAnimationObject {
@@ -7,8 +6,6 @@ export default class MenuAnimationObject {
         this.listLink = document.querySelectorAll('.menu-list');
 
         this.render();
-
-        // menu-shapes-wrapper
     }
 
     render() {
