@@ -1,5 +1,3 @@
-import { ScrollTrigger, gsap } from '/node_modules/gsap/all.js';
-
 export default class sliderObject {
     constructor() {
         this.slider = document.querySelector('.slider');

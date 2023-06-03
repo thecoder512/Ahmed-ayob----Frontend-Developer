@@ -1,6 +1,3 @@
-import { ScrollTrigger, gsap } from '/node_modules/gsap/all.js';
-import SplitType from '/node_modules/split-type/dist/index.js';
-
 export default class FooterAnimation {
     constructor() {
         this.triggerElement = document.querySelector('.footer-seciton');

@@ -1,5 +1,3 @@
-import { gsap } from '/node_modules/gsap/all.js';
-
 export default class CardHoverEffect {
     constructor() {
         this.cardWrapper = document.querySelectorAll('.card-wrapper');

@@ -1,5 +1,3 @@
-import { gsap } from '/node_modules/gsap/all.js';
-
 export default class HamburgerObject {
     constructor() {
         this.menu = document.querySelector('.menu-slide');

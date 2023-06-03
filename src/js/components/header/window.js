@@ -1,5 +1,3 @@
-import { gsap, ScrollTrigger } from '/node_modules/gsap/all.js';
-
 export default class WindowObject {
     constructor() {
         this.arrow = document.querySelector('.back-top');

@@ -1,4 +1,3 @@
-import { gsap } from '/node_modules/gsap/all.js';
 export default class StaggerShape {
     constructor() {
         this.gridContainer = document.querySelector('.grid-container');

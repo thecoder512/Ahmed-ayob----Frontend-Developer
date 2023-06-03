@@ -1,6 +1,3 @@
-import { gsap, ScrollTrigger } from '/node_modules/gsap/all.js';
-import SplitType from '/node_modules/split-type/dist/index.js';
-
 export default class AboutAnimation {
     constructor() {
         this.trigger = document.querySelector('.about-section');

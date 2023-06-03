@@ -1,11 +1,9 @@
-import { gsap } from '/node_modules/gsap/all.js';
-
 export default class MenuAnimationObject {
     constructor() {
         this.svgAnimation = document.querySelector('.home-shape');
         this.listLink = document.querySelectorAll('.menu-list');
 
-        this.render();
+        // this.render();
     }
 
     render() {

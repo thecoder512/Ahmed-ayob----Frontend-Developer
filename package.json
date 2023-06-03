@@ -1,27 +1,6 @@
 {
-    "name": "ahemdayobprofofolio",
-    "version": "0.1.0",
-    "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
-    "main": "/index.html",
-    "author": "ahemd ayob",
-    "scripts": {
-        "watch:scss": "node-sass src/scss/app.scss -o dist/css --watch --source-map true && postcss dist/css/app.css -o dist/css/app.css --use autoprefixer --autoprefixer.browsers 'last 2 versions'"
-    },
-    "dependencies": {
-        "animejs": "^3.2.1",
-        "autoprefixer": "^10.4.2",
-        "browser-sync": "^2.27.7",
-        "copyfiles": "^2.4.1",
-        "cssnano": "^5.0.17",
-        "gsap": "^3.11.5",
-        "gsap-drawsvg": "^1.0.0",
-        "npm-run-all": "^4.1.5",
-        "onchange": "^7.1.0",
-        "postcss-cli": "^9.1.0",
-        "sass": "^1.62.1",
-        "split-type": "^0.3.3"
-    },
-    "devDependencies": {
-        "node-sass": "^9.0.0"
-    }
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "split-type": "^0.3.3"
+  }
 }
