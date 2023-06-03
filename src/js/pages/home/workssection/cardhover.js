@@ -4,7 +4,7 @@ export default class CardHoverEffect {
         this.mouseOnCard = false;
         this.axis = { x: 0, y: 0 };
 
-        this.render();
+        // this.render();
     }
 
     render() {
