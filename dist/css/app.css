@@ -754,7 +754,6 @@ section {
 }
 .gat .grid-container .layer-dot {
   position: absolute;
-  background-color: red;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1374,7 +1373,7 @@ header .header-container .menu::after {
   pointer-events: none;
 }
 .menu-shapes-wrapper .home-shape {
-  background-image: url("../../../public/menu2.jpg");
+  background-image: url("/public/menu2.jpg");
   background-position: center 40%;
   background-size: 110vmax;
   height: 100%;

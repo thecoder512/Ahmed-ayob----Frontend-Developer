@@ -3,7 +3,7 @@ export default class MenuAnimationObject {
         this.svgAnimation = document.querySelector('.home-shape');
         this.listLink = document.querySelectorAll('.menu-list');
 
-        // this.render();
+        this.render();
     }
 
     render() {
