@@ -29,7 +29,7 @@ export default class AboutAnimation {
             ease: 'power1.out',
         });
 
-        tl.from('.char', {
+        tl.from('.about-section .char', {
             opacity: 0.3,
             y: '100%',
             stagger: {

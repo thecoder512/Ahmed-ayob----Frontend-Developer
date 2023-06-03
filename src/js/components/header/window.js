@@ -9,6 +9,7 @@ export default class WindowObject {
         this.menuButton = document.querySelector('.menu');
         this.trigger = document.querySelector('.about-section');
         this.hamburger = document.querySelector('.hamb-wrapper');
+        this.html = document.querySelector('html');
 
         this.render();
         this.menuRmoveONClickOnWindow();

@@ -53,7 +53,13 @@
         height: 600px;
     }
 
+    .card-wrapper {
+        height: fit-content;
+        height: fit-content;
+    }
+
     .card {
+        transform-style: preserve-3d;
         position: relative;
         scroll-snap-align: center;
         width: 240px;

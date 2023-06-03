@@ -299,6 +299,7 @@
     left: 1px;
     transform: translateX(-100%);
     height: 100%;
+    z-index: 10000;
 
     .rounded-div-wrap {
         position: relative;
@@ -308,6 +309,7 @@
         transition: all .85s cubic-bezier(.7, 0, .2, 1);
         will-change: width;
         overflow: hidden;
+        z-index: 10000;
 
         .rounded-div {
             width: 775%;
@@ -320,7 +322,7 @@
             background: $clr-black;
             border-radius: 50%;
             transform: translate(-6.5%, -50%);
-            z-index: 1;
+            z-index: 10000;
 
         }
     }

@@ -28,11 +28,12 @@ header {
 
             @include mq(mq2) {
                 font-size: size('big-size');
+                width: 198px;
             }
 
             @include mq(mq3) {
-                width: 170px;
-                font-size: size('titles-size');
+                width: 198px;
+                font-size: size('big-size');
             }
 
             .logo-mark {
@@ -42,11 +43,11 @@ header {
                 z-index: 10;
 
                 @include mq(mq2) {
-                    font-size: size('big-size') + .2rem;
+                    font-size: size('big-size');
                 }
 
                 @include mq(mq3) {
-                    font-size: size('big-size');
+                    font-size: size('big-size') + .2rem;
                 }
             }
 

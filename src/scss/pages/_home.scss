@@ -2,15 +2,11 @@
 @use '../base' as *;
 
 .hero-section {
+    background-color: $clr-black;
 
     .hero-container {
         position: relative;
         overflow: hidden;
-        // background-image: url('../../../public/home.png');
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // height: 100vh;
 
         .hero-img {
             display: block;
@@ -22,46 +18,6 @@
             }
 
         }
-
-        // .hero-img {
-        //     // height: 100vh;
-        //     position: relative;
-
-        //     @include mq(mq6) {
-        //         // height: 90vh;
-        //         // zoom: .85;
-        //     }
-
-        //     // svg {
-        //     //     width: 100%;
-        //     //     height: fit-content;
-        //     // }
-
-        //     img {
-        //         display: flex;
-        //         // position: absolute;
-        //         bottom: 0;
-        //         left: 0;
-        //         right: 0;
-        //         margin: 0 auto;
-        //         width: 118%;
-        //         // margin-bottom: 0;
-
-        //         // @include mq(mq1fold) {
-        //         //     margin-bottom: 2rem;
-        //         // }
-
-        //         // @include mq(mq1) {
-        //         //     width: 380px;
-        //         //     margin-bottom: 0;
-        //         // }
-
-
-        //         // @include mq(mq2) {
-        //         //     width: 430px; 
-        //         // }
-        //     }
-        // }
 
         .hero-text {
             display: grid;
@@ -107,6 +63,7 @@
             h1 {
                 font-weight: 500;
                 margin-top: 1.5rem;
+                line-height: 0;
 
                 @include mq(mq1) {
                     font-size: size('gaint-size') - .6rem;
@@ -134,6 +91,8 @@
                 span {
                     font-weight: weight('w-600');
                 }
+
+
             }
 
             .arrow {
@@ -154,6 +113,10 @@
             }
 
             .arrow path {
+                opacity: 0;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+
                 @include mq(mq1) {
                     stroke-width: 2.5;
                 }
