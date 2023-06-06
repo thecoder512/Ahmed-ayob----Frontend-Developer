@@ -1,3 +1,4 @@
+import { gsap } from 'gsap/all';
 export default class LogoObject {
     constructor() {
         this.logoText = document.querySelector('.logo');
@@ -11,7 +12,7 @@ export default class LogoObject {
         if (window.innerWidth > 540) {
             this.logoText.addEventListener('mouseenter', (_) => {
                 gsap.to(this.logoTextConent, 0.5, {
-                    x: -80,
+                    x: -94,
                     ease: 'power1.in',
                 });
                 gsap.to(

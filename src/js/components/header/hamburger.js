@@ -1,3 +1,5 @@
+import { gsap } from 'gsap/all';
+
 export default class HamburgerObject {
     constructor() {
         this.menu = document.querySelector('.menu-slide');

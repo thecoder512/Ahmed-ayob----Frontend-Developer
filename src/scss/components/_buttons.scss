@@ -2,18 +2,19 @@
 @use '../base' as *;
 
 .btn-text {
-    font-family: $popins;
+    font-family: $Roboto;
     outline: none;
     border: none;
     background: none;
     font-size: size('small-size ');
     cursor: pointer;
     will-change: transform;
+    transform-style: preserve-3d;
     transform: translateZ(0) rotate(0.001deg);
 }
 
 .btn-radius {
-    font-family: $popins;
+    font-family: $Roboto;
     outline: none;
     border: none;
     width: 120px;
@@ -25,6 +26,7 @@
     transform: translateZ(0) rotate(0.001deg);
     cursor: pointer;
     overflow: hidden;
+    transform-style: preserve-3d;
 
     @include mq(mq4) {
         width: 180px;

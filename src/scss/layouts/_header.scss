@@ -2,11 +2,9 @@
 @use '../base' as *;
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+    position: relative;
+    margin-bottom: -4rem;
+    z-index: 2;
 
     .header-container {
         @include flex-center-between;
@@ -25,35 +23,29 @@ header {
             white-space: nowrap;
             color: $clr-white;
             overflow: hidden;
+            font-weight: weight('w-400');
 
             @include mq(mq2) {
                 font-size: size('big-size');
-                width: 198px;
+                width: 176px;
             }
 
-            @include mq(mq3) {
-                width: 198px;
-                font-size: size('big-size');
+            .mark {
+                background-color: $clr-gray;
+                z-index: 10;
+                padding: .2rem;
             }
 
             .logo-mark {
                 display: inline-block;
                 font-size: size('titles-size');
-                background-color: #676b74;
-                z-index: 10;
 
                 @include mq(mq2) {
                     font-size: size('big-size');
                 }
 
-                @include mq(mq3) {
-                    font-size: size('big-size') + .2rem;
-                }
             }
 
-            .logo-text {
-                // overflow: hidden;
-            }
         }
 
         .menu {
@@ -65,7 +57,7 @@ header {
             }
 
             @include mq(mq3) {
-                font-size: size('big-size') + .3rem;
+                font-size: calc(size('big-size') + .3rem);
             }
 
             &::after {

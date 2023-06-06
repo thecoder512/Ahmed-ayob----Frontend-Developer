@@ -1,7 +1,8 @@
 @use "../utils/mixins" as *;
 
 
-$popins: 'Poppins', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+$Poppins: 'Poppins', sans-serif;
 
 /*========== Font and typography ==========*/
 $sizes: (
@@ -24,6 +25,6 @@ $weights: (
     'w-300':300,
     'w-400':400,
     'w-500':500,
-    'w-600':600,
-    'w-700':700,
+    'w-600':700,
+    'w-700':900,
 );

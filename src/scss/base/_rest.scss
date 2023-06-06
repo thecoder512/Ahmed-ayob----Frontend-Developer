@@ -12,13 +12,15 @@
 html {
     scroll-behavior: smooth;
     font-size: 100%;
+    height: 100%;
     overflow: auto;
 }
 
 body {
+    height: 100%;
     display: grid;
     // justify-content: center;
-    font-family: $popins;
+    font-family: $Roboto;
     font-size: 1rem;
     background-color: $clr-white;
     color: $clr-black;

@@ -1,0 +1,142 @@
+@use '../../utils' as *;
+@use '../../base' as *;
+
+.btn-fill {
+    display: block;
+    background: $clr-orange;
+    position: absolute;
+    width: 150%;
+    height: 200%;
+    border-radius: 50%;
+    top: -50%;
+    left: -25%;
+    transform: translate3d(0, -76%, 0);
+    will-change: transform;
+    transition: background-clr ease-in-out .25s;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+.hamb-wrapper {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    transition: transform 0.4s cubic-bezier(0.36, 0, 0.66, 0);
+    transform: translateY(0%) scale(0) rotate(0.001deg);
+    z-index: 205;
+
+    @include mq(mq2) {
+        top: 2rem;
+        right: 3.5rem;
+    }
+
+    @include mq(mq5) {
+        right: 4rem;
+    }
+
+    &.show-hamburger-scroll {
+        transform: translateY(0%) scale(1) rotate(0.001deg);
+    }
+
+    &.active-hamburger {
+        transform: translateY(0%) scale(1) rotate(0.001deg);
+
+        .hamburger-btn {
+            background-color: $clr-orange-dark;
+
+            .btn-text {
+                span {
+                    transform: translate(-13px,
+                            2px) rotate(45deg);
+
+                    &:nth-child(2) {
+                        transform: translate(-13px,
+                                2px) rotate(-45deg);
+
+                        @include mq(mq2) {
+                            transform: translate(-10px,
+                                    8px) rotate(-45deg);
+                        }
+
+                        @include mq(mq5) {
+                            transform: translate(-4px,
+                                    19px) rotate(-45deg);
+                        }
+                    }
+
+                    @include mq(mq2) {
+                        transform: translate(-10px,
+                                8px) rotate(45deg);
+                    }
+
+                    @include mq(mq5) {
+                        transform: translate(-4px,
+                                19px) rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .hamburger-btn {
+        width: 70px;
+        height: 70px;
+        border: 0;
+        transition: background-color 0.25s cubic-bezier(0.36, 0, 0.66, 0), box-shadow 0.25s cubic-bezier(0.36, 0, 0.66, 0);
+        border: none;
+        padding: 2rem;
+        overflow: hidden;
+
+        @include mq(mq2) {
+            width: 80px;
+            height: 80px;
+        }
+
+        @include mq(mq5) {
+            width: 100px;
+            height: 100px;
+        }
+
+        .btn-text {
+            pointer-events: none;
+            position: absolute;
+            width: 45%;
+            height: 8%;
+            opacity: 1;
+
+            span {
+                display: block;
+                position: absolute;
+                height: 1.5px;
+                width: 100%;
+                border-radius: 50rem;
+                transform: translate(-14px, 0px);
+                background: #FFFFFF;
+                transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+
+                @include mq(mq2) {
+                    transform: translate(-8px, 5px);
+                }
+
+                @include mq(mq5) {
+                    transform: translate(-2px, 23px);
+                }
+
+                &:nth-child(2) {
+
+                    transform: translate(-14px, 8px);
+
+                    @include mq(mq2) {
+                        transform: translate(-8px, 14px);
+                    }
+
+                    @include mq(mq5) {
+                        transform: translate(-2px, 13.5px);
+                    }
+                }
+            }
+        }
+    }
+}

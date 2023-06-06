@@ -1,0 +1,235 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.header-menu {
+    display: none;
+    gap: 3rem;
+    margin-bottom: -14px;
+
+    @include mq(mq4) {
+        @include flex-center-center;
+    }
+
+    li {
+        display: none;
+        justify-content: center;
+
+
+        @include mq(mq4) {
+            @include grid-place-center;
+        }
+
+        a {
+            display: grid;
+            color: $clr-white;
+            font-size: size('titles-size');
+            font-weight: weight('w-400');
+
+            @include mq(mq2) {
+                font-size: size('big-size');
+            }
+
+
+
+            &:hover .dot {
+                opacity: 1;
+                scale: 1;
+            }
+
+            .dot {
+                justify-self: center;
+                width: 8px;
+                height: 8px;
+                background-color: $clr-white;
+                border-radius: 50%;
+                margin-top: .3rem;
+                opacity: 0;
+                scale: .5;
+                transition: .3s ease-out;
+            }
+        }
+
+    }
+
+}
+
+.menu-slide {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: $clr-black;
+    z-index: 100;
+    transform: translate(calc(100% + 25vw), 0) rotate(0.001deg);
+    transition: transform .8s cubic-bezier(.7, 0, .2, 1);
+    will-change: transform;
+    // overflow: hidden;
+
+    @include mq(mq2) {
+        width: 70%;
+    }
+
+    @include mq(mq4) {
+        width: 40%;
+    }
+
+    &.active {
+        transform: translate(0, 0) rotate(0.001deg);
+
+        .rounded-shape-menu .rounded-div-wrap {
+            width: 0;
+        }
+    }
+
+    .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 15vh 7.5vw 10vh 7.5vw;
+        position: relative;
+        transform: translate(0, 0) rotate(0.001deg);
+        transition: all .6s cubic-bezier(.7, 0, .2, 1);
+        will-change: transform;
+        transition-delay: 0s;
+        z-index: 10;
+
+        .nav-title {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $clr-border-solid-light;
+        }
+
+        .social-title {
+            padding-block: 1rem;
+            border-top: 1px solid $clr-border-solid-light;
+        }
+
+        .small-title {
+            font-size: size('small-size');
+            font-weight: weight('w-400');
+            color: $clr-gray;
+            margin-bottom: .5rem;
+
+            @include mq(mq4) {
+                font-size: size('titles-size');
+                margin-bottom: 1.5rem;
+            }
+
+        }
+
+        .nav-menu {
+            margin-bottom: 2rem;
+
+            display: grid;
+            row-gap: 1rem;
+            overflow: hidden;
+
+            &:hover {
+                .menu-list {
+                    .list-link {
+                        color: $clr-gray;
+                        opacity: .7;
+                    }
+                }
+            }
+
+            .menu-list {
+                overflow: hidden;
+
+                &:hover {
+                    .list-link {
+                        font-size: calc(size('big-size') + .5rem);
+                        opacity: 1;
+
+                        @include mq(mq5) {
+                            font-size: calc(size('gaint-size') + .6rem);
+                        }
+
+                        color: $clr-white;
+                        animation: revealtext .2s forwards ease-in;
+
+                        &:before {
+                            left: 0;
+                        }
+                    }
+                }
+
+                .list-link {
+                    display: inline-block;
+                    position: relative;
+                    padding: .5rem;
+                    font-size: calc(size('big-size') + .7rem);
+                    font-weight: weight('w-500');
+                    color: $clr-white;
+                    transition: filter .2s ease, font-size .4s ease;
+
+                    @include mq(mq4) {
+                        font-size: calc(size('big-size') + .3rem);
+                        ;
+                    }
+
+                    @include mq(mq5) {
+                        font-size: calc(size('gaint-size') + .3rem);
+                    }
+
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        left: -110%;
+                        background-color: $clr-white;
+                        transition: all .4s ease-in;
+                    }
+                }
+
+
+            }
+        }
+
+        .menu-social-wrapper {
+            display: grid;
+
+            .social-link {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    inset: auto 0 0 0;
+                    margin: 0 auto;
+                    transform-origin: right;
+                    background-color: $clr-white;
+                    transition: .3s ease-in-out;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+            div {
+                @include flex-center;
+                gap: 2rem;
+
+                svg {
+                    width: size('gaint-size') - .5rem;
+                    height: size('gaint-size') - .5rem;
+                    fill: $clr-white;
+
+                    @include mq(mq4) {
+                        width: size('gaint-size') + .5rem;
+                        height: size('gaint-size') + .5rem;
+                    }
+
+
+                }
+            }
+
+        }
+    }
+}

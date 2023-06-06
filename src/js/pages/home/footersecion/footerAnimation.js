@@ -1,3 +1,5 @@
+import { ScrollTrigger, gsap } from 'gsap/all';
+
 export default class FooterAnimation {
     constructor() {
         this.triggerElement = document.querySelector('.footer-seciton');
@@ -37,13 +39,22 @@ export default class FooterAnimation {
                 trigger: this.triggerElement,
                 start: '0% 100%',
                 end: '100% 140%',
-                scrub: 0,
+                scrub: 1,
             },
         });
         tl.to(
             this.footerRoundedShape,
             {
                 height: 0,
+                rotation: 0.01,
+                ease: 'none',
+            },
+            0
+        );
+        tl.to(
+            '.footer-naviation',
+            {
+                paddingTop: `7rem`,
                 rotation: 0.01,
                 ease: 'none',
             },
@@ -66,9 +77,11 @@ export default class FooterAnimation {
         let tl3 = gsap.timeline({
             scrollTrigger: {
                 trigger: this.triggerElement,
-                start: 'top 30%',
+                start: 'top 55%',
                 end: '30% 80%',
                 toggleActions: 'restart none reverse none',
+                // markers: true,
+                // scrub: 1,
             },
         });
         tl3.fromTo(

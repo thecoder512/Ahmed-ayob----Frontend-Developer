@@ -1,29 +1,24 @@
+import { ScrollTrigger, gsap } from 'gsap/all';
 export default class HeroAnimation {
     constructor() {
         this.render();
-        this.mainTitleAnimation();
+        // this.mainTitleAnimation();
     }
 
     render() {
         gsap.registerPlugin(ScrollTrigger);
-        let tl = gsap.timeline({
-            defaults: {
-                scrollTrigger: {
-                    tigger: '.about-section',
-                    start: 'top 0%',
-                    scrub: 1,
-                },
-                duration: 1,
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.about-section',
+                start: `top 100%`,
+                end: `top 20%`,
+                scrub: 1,
             },
         });
 
-        tl.to('.hero-text .arrow', 2, {
-            y: '-200',
-            rotation: 0.01,
-        });
         tl.to(
             '.hero-img',
-            2,
             {
                 height: '90vh',
                 rotation: 0.01,
@@ -31,20 +26,19 @@ export default class HeroAnimation {
             '<'
         );
         tl.to(
-            '.digital-ball',
-            2,
+            '.home-arrow',
             {
-                y: '-100',
+                y: '-200',
                 rotation: 0.01,
             },
             '<'
         );
         tl.to(
-            '.main-title',
-            2,
+            '.h-anime',
             {
                 y: '-100',
                 rotation: 0.01,
+                stagger: 0.2,
             },
             '<'
         );
@@ -57,7 +51,13 @@ export default class HeroAnimation {
             let splitText = new SplitType(title, {
                 types: 'workds characters',
             });
-
+            // tl.to(
+            //     '.hero-section',
+            //     {
+            //         y: 0,
+            //     },
+            //     '<4'
+            // );
             tl.from(
                 splitText.chars,
                 {
@@ -103,15 +103,6 @@ export default class HeroAnimation {
             '<.2'
         );
         tl.from(
-            '.hero-img',
-            {
-                opacity: 0,
-                x: 50,
-                y: 50,
-            },
-            '<'
-        );
-        tl.from(
             '.logo',
             {
                 scale: 0.5,
@@ -143,7 +134,7 @@ export default class HeroAnimation {
         }
         tl.from('.hero-text', { bottom: `19%` }, '<');
         tl.to(
-            '.arrow path',
+            '.home-arrow path',
             {
                 strokeDashoffset: 0,
                 opacity: 1,

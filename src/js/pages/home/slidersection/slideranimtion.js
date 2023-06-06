@@ -1,3 +1,5 @@
+import { ScrollTrigger, gsap } from 'gsap/all';
+
 export default class sliderObject {
     constructor() {
         this.slider = document.querySelector('.slider');
@@ -14,12 +16,12 @@ export default class sliderObject {
                 trigger: '.slider-section',
                 start: '0% 80%',
                 end: '0% -80%',
-                scrub: 0,
+                scrub: 1,
                 ease: 'none',
             },
         });
 
-        tl.to('.sliderone', { x: -110, rotation: 0.01 });
-        tl.to('.slidertwo', { x: -490, rotation: 0.01 }, '<');
+        tl.to('.sliderone', { x: 90, rotation: 0.01 });
+        tl.to('.slidertwo', { x: -450, rotation: 0.01 }, '<');
     }
 }

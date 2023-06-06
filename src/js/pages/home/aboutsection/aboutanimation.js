@@ -1,3 +1,4 @@
+import { ScrollTrigger, gsap } from 'gsap/all';
 export default class AboutAnimation {
     constructor() {
         this.trigger = document.querySelector('.about-section');

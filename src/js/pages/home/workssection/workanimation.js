@@ -1,3 +1,5 @@
+import { ScrollTrigger, gsap } from 'gsap/all';
+
 export default class WorkAnimation {
     constructor() {
         this.workTitle = document.querySelector('.works-title');

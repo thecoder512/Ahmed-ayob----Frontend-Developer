@@ -5,17 +5,15 @@
     position: relative;
     margin-top: 4rem;
     background-color: $clr-black;
-    padding-bottom: 3rem;
 
     .footer-naviation {
         @include section;
         @include container;
-        padding-block: 3rem;
         display: grid;
-        z-index: 10;
-        position: relative;
+        padding-block: 3rem;
 
         @include mq(mq1) {
+            padding-block: 3rem;
             gap: 1.5rem;
         }
 
@@ -63,25 +61,25 @@
 
                 h2 {
                     font-size: size('gaint-size');
-                    font-weight: weight('w-500');
+                    font-weight: weight('w-600');
                     // height: 113px;
                     overflow: hidden;
                     position: relative;
 
                     @include mq(mq1) {
-                        font-size: size('gaint-size') + .5rem;
+                        font-size: calc(size('gaint-size') + .5rem);
                     }
 
                     @include mq(mq2) {
-                        font-size: size('gaint-size') + 1.5rem;
+                        font-size: calc(size('gaint-size') + 1.5rem);
                     }
 
                     @include mq(mq3) {
-                        font-size: size('gaint-size') + 2.5rem;
+                        font-size: calc(size('gaint-size') + 2.5rem);
                     }
 
                     @include mq(mq4) {
-                        font-size: size('gaint-size') + 3.5rem;
+                        font-size: calc(size('gaint-size') + 3.5rem);
                     }
 
                     &:nth-child(2) {
@@ -123,15 +121,15 @@
                 }
 
                 .btn-text {
-                    font-size: size('medium-size') - .1rem;
+                    font-size: calc(size('medium-size') - .1rem);
                     font-weight: weight('w-500');
 
                     @include mq(mq2) {
-                        font-size: size('medium-size') + .1rem;
+                        font-size: calc(size('medium-size') + .1rem);
                     }
 
                     @include mq(mq4) {
-                        font-size: size('big-size') - .1rem;
+                        font-size: calc(size('big-size') - .1rem);
                     }
                 }
 

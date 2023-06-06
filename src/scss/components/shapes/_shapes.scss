@@ -1,0 +1,100 @@
+@use '../../utils' as *;
+@use '../../base' as *;
+
+
+
+.gat {
+    // position: relative;
+    position: absolute;
+    inset: 0%;
+    pointer-events: none;
+    user-select: none;
+    // top: 0;
+
+    .grid-container {
+        --column: 2;
+        --row: 2;
+        display: grid;
+        grid-template-columns: repeat(var(--column), 1fr);
+        grid-template-rows: repeat(var(--row), 1fr);
+        gap: 25px;
+
+        .grid-item {
+            background: linear-gradient(0deg, rgba(65, 65, 65, .05) 0%, rgba(255, 255, 255, .05) 100%);
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 2;
+            transform-origin: center;
+        }
+
+        .layer-dot {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+}
+
+.shape {
+    position: absolute;
+    top: -6.35rem;
+    left: -24%;
+    display: none;
+
+    // @include mq(mq1) {
+    //     scale: 1.2;
+    //     top: -5.15rem;
+    //     left: 8px;
+    // }
+
+    @include mq(mq3) {
+        scale: 1.5;
+        top: 5rem;
+        left: 6.8rem;
+    }
+
+}
+
+.blur-shape {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    opacity: 0;
+    transition: .5s ease-out;
+    pointer-events: none;
+
+    &.active-blur-shape {
+        opacity: 1;
+    }
+}
+
+.back-top {
+    display: block;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    right: 1rem;
+    bottom: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.3);
+    background-color: $clr-black;
+    z-index: 2;
+    transition: .3s ease-out;
+    opacity: 0;
+    transform: scale(.5);
+    cursor: pointer;
+
+    @include mq(mq3) {
+        right: 2rem;
+        bottom: 2.2rem;
+    }
+
+    svg {
+        fill: $clr-white
+    }
+}

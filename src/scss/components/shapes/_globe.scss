@@ -1,0 +1,122 @@
+@use '../../utils' as *;
+@use '../../base' as *;
+
+.digital-ball {
+    @include mq(mq1) {
+        margin-bottom: 1rem;
+    }
+
+    @include mq(mq4) {
+        margin-bottom: 4rem;
+    }
+
+    .overlay {
+        // will add style in queries
+    }
+
+    .globe {
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        overflow: hidden;
+        will-change: transform;
+
+        @include mq(mq1) {
+            width: 3em;
+            height: 3em;
+        }
+
+        @include mq(mq2) {
+            width: 5em;
+            height: 5em;
+        }
+
+        @include mq(mq5) {
+            width: 8em;
+            height: 8em;
+        }
+
+        .globe-wrap {
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) rotate(30deg);
+            animation: globe 5.4s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 0px .125em $clr-white;
+
+            @include mq(mq2) {
+                box-shadow: inset 0px 0px 0px .225em $clr-white;
+            }
+
+            @include mq(mq5) {
+                box-shadow: inset 0px 0px 0px .3em $clr-white;
+            }
+
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                box-shadow: inset .1em 0px 0px .08em $clr-white;
+                animation: circle1 2.7s linear infinite;
+                font-size: .75em;
+
+                &:nth-child(1) {
+                    animation-delay: -1.8s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: -9s;
+                }
+            }
+
+            .circle-hor {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 150%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                height: 55%;
+                box-shadow: inset 0px 0px 0px .15em $clr-white;
+                font-size: .75em;
+
+                @include mq(mq2) {
+                    font-size: 1.3em;
+                }
+
+                @include mq(mq2) {
+                    font-size: 1.8em;
+                }
+            }
+
+            .circle-hor-middle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 150%;
+                transform: translate(-50%, -50%);
+                border-radius: 0%;
+                height: .15em;
+                background: $clr-white;
+                font-size: .75em;
+
+                @include mq(mq2) {
+                    height: .25em;
+                }
+
+                @include mq(mq2) {
+                    height: .4em;
+                }
+            }
+        }
+    }
+}

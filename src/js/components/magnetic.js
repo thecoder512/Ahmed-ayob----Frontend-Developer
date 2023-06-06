@@ -1,3 +1,4 @@
+import { gsap } from 'gsap/all';
 export default class MagneticObject {
     constructor() {
         this.domElement = [...document.querySelectorAll('.magnetic')];
@@ -17,7 +18,7 @@ export default class MagneticObject {
         this.boundingClientRect = element.getBoundingClientRect();
         this.magnetsStrength = element.getAttribute('data-strength');
         this.magnetsStrengthText = element.getAttribute('data-strength-text');
-
+        console.log(this.boundingClientRect);
         if (window.innerWidth > 540) {
             gsap.to(element, 1.5, {
                 x:

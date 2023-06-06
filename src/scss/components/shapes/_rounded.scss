@@ -1,0 +1,71 @@
+@use '../../utils' as *;
+@use '../../base' as *;
+
+.shapey {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    .footer-shape {
+        width: 100%;
+        top: 0;
+        position: relative;
+        height: 10vh;
+        // overflow: hidden;
+        transform: translateY(-1px);
+        will-change: height;
+
+        .layout {
+            width: 150%;
+            content: "";
+            display: block;
+            position: absolute;
+            background: $clr-white;
+            height: 350%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -86.666%);
+            z-index: 20;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 61px 111px -3px;
+
+            @include mq(mq1) {
+                height: 750%;
+            }
+        }
+    }
+}
+
+.rounded-shape-menu {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    transform: translateX(-100%);
+    height: 100%;
+    z-index: 10000;
+
+    .rounded-div-wrap {
+        position: relative;
+        top: 0;
+        height: 100%;
+        width: 20vw;
+        transition: all .85s cubic-bezier(.7, 0, .2, 1);
+        will-change: width;
+        overflow: hidden;
+        z-index: 10000;
+
+        .rounded-div {
+            width: 775%;
+            content: "";
+            display: block;
+            position: absolute;
+            height: 150%;
+            top: 50%;
+            left: 50%;
+            background: $clr-black;
+            border-radius: 50%;
+            transform: translate(-6.5%, -50%);
+            z-index: 10000;
+
+        }
+    }
+}
